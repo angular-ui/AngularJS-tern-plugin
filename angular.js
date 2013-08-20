@@ -216,6 +216,23 @@
       "$anchorScroll": {
         "!type": "fn()"
       },
+      "$animate": {
+        "addClass": {
+          "!type": "fn(element: jQueryLite, className: string, done: ?)"
+        },
+        "enter": {
+          "!type": "fn(element: jQueryLite, parent: jQueryLite, after: jQueryLite, done: ?"
+        },
+        "leave": {
+          "!type": "fn(element: jQueryLite, done: ?"
+        },
+        "move": {
+          "!type": "fn(element: jQueryLite, parent: jQueryLite, after: jQueryLite, done: ?"
+        },
+        "removeClass": {
+          "!type": "fn(element: jQueryLite, className: string, done: ?"
+        }
+      },
       "$document": {
         "!proto": "jQueryLite"
       },
