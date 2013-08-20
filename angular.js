@@ -658,8 +658,27 @@
           "!type": "fn() -> bool"
         }
       },
+      "$sceDelegate": {
+        "getTrusted": {
+          "!type": "fn(type: string, maybeTrusted: ?)"
+        },
+        "trustAs": {
+          "!type": "fn(type: string, value: ?)"
+        },
+        "valueOf": {
+          "!type": "fn(value: ?)"
+        }
+      },
       "$scope": {
         "!proto": "Scope"
+      },
+      "$templateCache": {
+        "put": {
+          "!type": "fn(templateID: string, templateContent: string)"
+        },
+        "get": {
+          "!type": "fn(templateID: string) -> string"
+        }
       },
       "Scope": {
         "$apply": {
