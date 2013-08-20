@@ -5,9 +5,9 @@
     return define(["../lib/infer", "../lib/tern"], mod);
   mod(tern, tern);
 })(function(infer, tern) {
- 
+
   "use strict";
- 
+
   function injectDirectiveReturnFnTypes (fn) {
     if(!fn.originNode) return;
     var ngDefinitions = infer.cx().definitions.angularjs;
@@ -26,7 +26,7 @@
       retvalArgs[i].addType(ngDefinitions[retvalArgTypes[i]]);
     }
   }
- 
+
   function tryToDefinedConstructorExpression (userInjectors) {
     var ngDefinitions = infer.cx().definitions.angularjs;
     var definedList = [];
@@ -101,12 +101,12 @@
       }
     });
   }
- 
+
   function injectTypesIntoFnParams (fn){
     if(!fn.argNames) return {}; // there are no args passed into function
     var ngDefinitions = infer.cx().definitions.angularjs;
     var argName = '';
- 
+
     for(var i = 0; i < fn.argNames.length; i++){
       argName = fn.argNames[i];
       if(ngDefinitions[argName]){
@@ -117,7 +117,7 @@
     }
     return fn;
   }
- 
+
   function getFnFromArray (arr){
     var types = [];
     if(arr.props['<i>'] && arr.props['<i>'].types && arr.props['<i>'].types.length){
@@ -129,7 +129,7 @@
     }
     return {};
   }
- 
+
   function tryToInjectTypes (args){
     var fn = {};
     if(args && args.length == 2 && args[1].proto){
@@ -192,7 +192,7 @@
       })
     }
   });
- 
+
   tern.registerPlugin("angular", function(server, options) {
     server._angularJS = {
       interfaces: Object.create(null),
@@ -200,7 +200,7 @@
       currentFile: null,
       server: server
     };
- 
+
     server.on("beforeLoad", function(file) {
       this._angularJS.currentFile = file.name;
     });
@@ -209,7 +209,7 @@
     });
     return {defs: defs};
   });
- 
+
   var defs = {
     "!name": "angularjs",
     "!define": {
@@ -647,7 +647,7 @@
         }
       },
       "$window": {
-         
+
       }
     },
     "angular": {
