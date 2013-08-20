@@ -599,6 +599,9 @@
         "!proto": "ResourceClass",
         "!type": "fn(url: string, paramDefaults?: ?) -> +$resource",
       },
+      "$rootElement": {
+        "!proto": "jQueryLite"
+      },
       "$rootScope": {
         "!proto": "Scope"
       },
