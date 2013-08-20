@@ -220,17 +220,20 @@
         "addClass": {
           "!type": "fn(element: jQueryLite, className: string, done: ?)"
         },
+        "enabled":{
+          "!type": "fn(value: bool) -> bool"
+        }
         "enter": {
-          "!type": "fn(element: jQueryLite, parent: jQueryLite, after: jQueryLite, done: ?"
+          "!type": "fn(element: jQueryLite, parent: jQueryLite, after: jQueryLite, done: ?)"
         },
         "leave": {
-          "!type": "fn(element: jQueryLite, done: ?"
+          "!type": "fn(element: jQueryLite, done: ?)"
         },
         "move": {
-          "!type": "fn(element: jQueryLite, parent: jQueryLite, after: jQueryLite, done: ?"
+          "!type": "fn(element: jQueryLite, parent: jQueryLite, after: jQueryLite, done: ?)"
         },
         "removeClass": {
-          "!type": "fn(element: jQueryLite, className: string, done: ?"
+          "!type": "fn(element: jQueryLite, className: string, done: ?)"
         }
       },
       "$document": {
@@ -607,10 +610,10 @@
       },
       "$sce": {
         "getTrusted": {
-          "!type": "fn(type: string, maybeTrusted: ?"
+          "!type": "fn(type: string, maybeTrusted: ?)"
         },
         "getTrustedCss": {
-          "!type": "fn(value: ?"
+          "!type": "fn(value: ?)"
         },
         "getTrustedHtml": {
           "!type": "fn(value: ?)"
