@@ -680,6 +680,14 @@
           "!type": "fn(templateID: string) -> string"
         }
       },
+      "$timeout": {
+        "!type": "fn(fun: fn, delay: number, invokeApply: bool) -> $q"
+      },
+      "$swipe": {
+        "bind": {
+          "!type": "fn(element: jQueryLite, handlersObj: obj)"
+        }
+      },
       "Scope": {
         "$apply": {
           "!type": "fn(exp?: ?)"
