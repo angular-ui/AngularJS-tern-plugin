@@ -605,6 +605,59 @@
       "$rootScope": {
         "!proto": "Scope"
       },
+      "$sce": {
+        "getTrusted": {
+          "!type": "fn(type: string, maybeTrusted: ?"
+        },
+        "getTrustedCss": {
+          "!type": "fn(value: ?"
+        },
+        "getTrustedHtml": {
+          "!type": "fn(value: ?)"
+        },
+        "getTrustedJs": {
+          "!type": "fn(value: ?)"
+        },
+        "getTrustedResourceUrl": {
+          "!type": "fn(value: ?)"
+        },
+        "getTrustedUrl": {
+          "!type": "fn(value: ?)"
+        },
+        "parse": {
+          "!type": "fn(type: string, expression: string) -> fn(context: obj, locals: obj)"
+        },
+        "parseAsCss": {
+          "!type": "fn(expression: string) -> fn(context: obj, locals: obj)"
+        },
+        "parseAsJs": {
+          "!type": "fn(expression: string) -> fn(context: obj, locals: obj)"
+        },
+        "parseAsResourceUrl": {
+          "!type": "fn(expression: string) -> fn(context: obj, locals: obj)"
+        },
+        "parseAsUrl": {
+          "!type": "fn(expression: string) -> fn(context: obj, locals: obj)"
+        },
+        "trustAs": {
+          "!type": "fn(type: string, value: ?)"
+        },
+        "trustAsHtml": {
+          "!type": "fn(value: ?) -> obj"
+        },
+        "trustAsJs": {
+          "!type": "fn(value: ?) -> obj"
+        },
+        "trustAsResourceUrl": {
+          "!type": "fn(value: ?) -> obj"
+        },
+        "trustAsUrl": {
+          "!type": "fn(value: ?) -> obj"
+        },
+        "isEnabled": {
+          "!type": "fn() -> bool"
+        }
+      },
       "$scope": {
         "!proto": "Scope"
       },
