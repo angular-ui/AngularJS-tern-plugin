@@ -222,7 +222,7 @@
         },
         "enabled":{
           "!type": "fn(value: bool) -> bool"
-        }
+        },
         "enter": {
           "!type": "fn(element: jQueryLite, parent: jQueryLite, after: jQueryLite, done: ?)"
         },
