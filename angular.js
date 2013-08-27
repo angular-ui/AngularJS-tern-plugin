@@ -31,12 +31,12 @@
     var ngDefinitions = infer.cx().definitions.angularjs;
     var definedList = [];
     userInjectors.forEach(function(fn){
-      var defined = {}, fn;
+      var defined = {}, obj;
       if(fn.argNodes && fn.argNodes.length == 2){
         if(fn.argNodes[0].type == 'Literal'){
           defined.name = fn.argNodes[0].value;
         }
-        fn = fn.argNodes[1]
+        fn = fn.argNodes[1];
         if(fn.type == 'ArrayExpression'){
           fn = fn.elements[fn.elements.length-1];
         }
@@ -49,11 +49,11 @@
             fn.body.scope.fnType.self.forward &&
             fn.body.scope.fnType.self.forward.length
           ){
-            var obj = new infer.Obj(true);
+            obj = new infer.Obj(true);
             fn.body.scope.fnType.self.forward.forEach(function(item){
               if(item.target){
                 var aVal = obj.defProp(item.prop);
-                aVal.addType(item.target)
+                aVal.addType(item.target);
               }
             });
             defined.value = obj;
@@ -91,7 +91,7 @@
         if(fn.argNodes[0].type == 'Literal'){
           name = fn.argNodes[0].value;
         }
-        _fn = fn.argNodes[1]
+        _fn = fn.argNodes[1];
         if(_fn.type == 'ArrayExpression'){
          _fn = _fn.elements[_fn.elements.length-1]; // function should be last item in array
         }
@@ -121,7 +121,7 @@
   function getFnFromArray (arr){
     var types = [];
     if(arr.props['<i>'] && arr.props['<i>'].types && arr.props['<i>'].types.length){
-      types = arr.props['<i>'].types
+      types = arr.props['<i>'].types;
       for(var i = 0; i < types.length; i++){
         if(types[i].proto.name == 'Function.prototype')
           return types[i];
@@ -189,7 +189,7 @@
             ngDefinitions[fn.argNodes[0].value] = fn.args[1];
           }
         }
-      })
+      });
     }
   });
 
@@ -600,7 +600,7 @@
       },
       "$resource": {
         "!proto": "ResourceClass",
-        "!type": "fn(url: string, paramDefaults?: ?) -> +$resource",
+        "!type": "fn(url: string, paramDefaults?: ?) -> +$resource"
       },
       "$rootElement": {
         "!proto": "jQueryLite"
@@ -728,7 +728,7 @@
       },
       "Attrs": {
         "$set": {
-          "!type": "fn(name: string, value: string)",
+          "!type": "fn(name: string, value: string)"
         },
         "$attr": {}
       },
