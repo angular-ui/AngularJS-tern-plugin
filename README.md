@@ -1,7 +1,7 @@
 AngularJS-tern-plugin
 =====================
 
-A, slow'ish moving, WIP plugin for Tern that enables it to understand AngularJS dependency injection.
+Plugin for Tern that enables it to understand AngularJS dependency injection.
 
 [View Example](http://www.youtube.com/watch?v=kDdkfHWqVU0)
 
@@ -33,5 +33,21 @@ A, slow'ish moving, WIP plugin for Tern that enables it to understand AngularJS 
   ```js
     { "disable_default_js_completions": true }
   ```
+5. Completions will not work if you use a vanilla JS function.
 
+Will *not* show completions:
+```js
+function SomeCtrl($scope, $http) {
+  $http. // <-- no completions here
+}
+```
+
+But this will:
+```js
+angular.module('MyApp', [])
+.controller('SomeCtrl', function($scope, $http) {
+    $http. // <-- you'll have completions now
+});
+```
 The completions are worth the effort.
+
