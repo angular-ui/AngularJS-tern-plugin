@@ -1,6 +1,8 @@
 AngularJS-tern-plugin
 =====================
 
+**tern 0.5 now has experimental angular support built in** [ternjs.net](http://ternjs.net)
+
 Plugin for Tern that enables it to understand AngularJS dependency injection.
 
 [View Example](http://www.youtube.com/watch?v=kDdkfHWqVU0)
